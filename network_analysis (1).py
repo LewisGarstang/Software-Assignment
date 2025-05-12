@@ -9,7 +9,7 @@ def capture_packets(packet_count=10, output_file='packet_log.csv'):
     try:
         # Create a raw socket for IPv4 traffic
         sock = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_IP)
-        sock.bind(("0.0.0.0", 0))  # Bind to all interfaces
+        sock.bind(("192.168.51.149", 0))  # Bind to all interfaces
 
         # Include IP headers
         sock.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
